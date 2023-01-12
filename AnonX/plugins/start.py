@@ -193,43 +193,7 @@ async def start_comm(client, message: Message, _):
                     config.LOG_GROUP_ID,
                     f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <code>ᴛʀᴀᴄᴋ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</code>\n\n**ᴜsᴇʀ ɪᴅ:** {sender_id}\n**ᴜsᴇʀɴᴀᴍᴇ:** {sender_name}",
                 )
-    else:
-        try:
-            await app.resolve_peer(OWNER_ID[0])
-            OWNER = OWNER_ID[0]
-        except:
-            OWNER = None
-        out = private_panel(_, app.username, OWNER)
-        if config.START_IMG_URL:
-            try:
-                await message.reply_sticker("CAACAgUAAxkBAAIjTGKPYCq3keRZgNbshxtJ5k7H609OAAIZBgACYAF5VIerYoMcSln8JAQ")
 
-        if await is_on_off(config.LOG):
-            sender_id = message.from_user.id
-            sender_name = message.from_user.first_name
-            return await app.send_message(
-                config.LOG_GROUP_ID,
-                f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ʏᴏᴜʀ ʙᴏᴛ.\n\n**ᴜsᴇʀ ɪᴅ:** {sender_id}\n**ᴜsᴇʀɴᴀᴍᴇ:** {sender_name}",
-            )
-
-
-@app.on_message(
-    filters.command(get_command("START_COMMAND"))
-    & filters.group
-    & ~filters.edited
-    & ~BANNED_USERS
-)
-@LanguageStart
-async def testbot(client, message: Message, _):
-    OWNER = OWNER_ID[0]
-    out = start_pannel(_, app.username, OWNER)
-    return await message.reply_photo(
-               photo=config.START_IMG_URL,
-               caption=_["start_1"].format(
-            message.chat.title, config.MUSIC_BOT_NAME
-        ),
-        reply_markup=InlineKeyboardMarkup(out),
-    )
 
 
 welcome_group = 2
