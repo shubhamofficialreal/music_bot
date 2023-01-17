@@ -10,7 +10,7 @@ load_dotenv()
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
 
-BOT_TOKEN = getenv("BOT_TOKEN", "5889054634:AAFM0W-A9IKxzQJNcYgalDObMzKAG4ZReY0")
+BOT_TOKEN = getenv("BOT_TOKEN", "")
 
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://its_star_boi:7234049299@cluster0.8twjh9e.mongodb.net/?retryWrites=true&w=majority")
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001621682412"))
@@ -59,7 +59,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", "1073741824"))
 # https://www.gbmb.org/mb-to-bytes
 
 
-STRING1 = getenv("STRING_SESSION", "BQBmoOyPhew6Wfegdw1cDFbwKdh42NhBlDVsD05_dgdqp2JeS0q9VTnHuTvInCXvnZ6iehlQ9iZyljypJSxF6W8Bzsp6Cj_9_SjVo5BXY1I469kZMAR3cj4uj6N-QBiOF5EJUaPqw5ZjJBJhzSPQI_yXiIkLITzUo0acuu8vybC9znkuvSks40HrYR_Pn6whsjhcyU7P4wSjtWXVzLYBNjqWo5wMW7dR85r6mLPMBPVAZyVZfy9t4aLdFD8MS_haDTx3_8HUT-gh_Ek6RUOUz7kqESBJzUlJTN1e-xbNmGd5I4C3VmdZHCR5iknxe3WhFZo51x8y9OGFAshmVazJ9IeeaNPuSQA")
+STRING1 = getenv("STRING_SESSION", "")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
